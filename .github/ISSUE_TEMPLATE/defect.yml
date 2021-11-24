@@ -1,0 +1,99 @@
+name: Defect
+description: Create a new defect
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # SPM Defect Title
+        ### Description
+        Describe the defect
+        ### Steps to Reproduce
+        - Step 1
+        - Step 2
+        ...
+        - Step N
+        ### Expected Behaviour
+        Describe expected behaviour here
+  - type: dropdown
+    id: version
+    attributes:
+      label: TargetVersion
+      description: What version of our software are you running?
+      options:
+        - 8.0.1.0
+        - 8.0.0.0
+        - 7.0.11.0
+    validations:
+      required: true        
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      description: Who will work on this defect
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Release Note
+      description: Provide a detailed release note
+      value: |
+      Issue Description:
+      Ensure that this includes where, in the product the issue is and the consequence of the issue (i.e. what impact it had on the user- i.e. the as-is scenario)
+
+      User Interface Impact: Yes/No this should indicate a simple Yes or No - if 'Yes', note that it should be clear in the description of the issue and resolution as to what the screen before and after is.
+
+      Steps to Reproduce:Numbered steps on how to create the scenario that would have resulted in the issue that has been resolved (use common sense in the detail of the steps)
+
+      Step 1
+      Step 2
+      Step 3
+      Step 4
+      Issue:
+
+
+      Resolution:
+      As we mostly do today, outline the 'to-be' scenario, you don't need to outline how we have fixed it unless it is relevant to the customer taking it on
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: dropdown
+    id: team
+    attributes:
+      label: Team
+      description: What team will own this defect?
+      options:
+        - Team A
+        - Team B
+        - Team C
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
