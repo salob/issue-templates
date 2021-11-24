@@ -43,23 +43,23 @@ body:
       label: Release Note
       description: Provide a detailed release note
       value: |
-      Issue Description:
-      Ensure that this includes where, in the product the issue is and the consequence of the issue (i.e. what impact it had on the user- i.e. the as-is scenario)
+       Issue Description:
+       Ensure that this includes where, in the product the issue is and the consequence of the issue (i.e. what impact it had on the user- i.e. the as-is scenario)
 
-      User Interface Impact: Yes/No this should indicate a simple Yes or No - if 'Yes', note that it should be clear in the description of the issue and resolution as to what the screen before and after is.
+       User Interface Impact: Yes/No this should indicate a simple Yes or No - if 'Yes', note that it should be clear in the description of the issue and resolution as to what the screen before and after is.
 
-      Steps to Reproduce:Numbered steps on how to create the scenario that would have resulted in the issue that has been resolved (use common sense in the detail of the steps)
+       Steps to Reproduce:Numbered steps on how to create the scenario that would have resulted in the issue that has been resolved (use common sense in the detail of the steps)
 
-      Step 1
-      Step 2
-      Step 3
-      Step 4
-      Issue:
+        Step 1
+        Step 2
+        Step 3
+        Step 4
+       Issue:
 
 
-      Resolution:
-      As we mostly do today, outline the 'to-be' scenario, you don't need to outline how we have fixed it unless it is relevant to the customer taking it on
-      value: "A bug happened!"
+       Resolution:
+       As we mostly do today, outline the 'to-be' scenario, you don't need to outline how we have fixed it unless it is relevant to the customer taking it on
+      placeholder: "Stuff"
     validations:
       required: true
   - type: dropdown
